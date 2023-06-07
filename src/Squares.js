@@ -32,7 +32,7 @@ const Board = () => {
 
   return (
     <div className='main'>
-      <p>TIC TAC TOE </p>
+      <p>TIC TAC TOE</p>
       <div className='status'>{gameStatus}</div>
       <br />
       <div className='row'>
