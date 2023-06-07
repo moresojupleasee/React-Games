@@ -11,3 +11,143 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+}
+
+.navBar .links {
+  margin-left: auto;
+}
+.links a {
+  padding: 8px;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.square {
+  text-decoration: none;
+  color: rgb(24, 22, 22);
+  font-size: 30px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  height: 70px;
+}
+
+.row {
+  display: flex;
+}
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.main p {
+  color: rgb(47, 156, 52);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+* {
+  background: rgb(32, 30, 30);
+  color: white;
+}
+
+.row button {
+  color: rgb(62, 199, 187);
+  background: rgb(41, 37, 37);
+}
+.row button {
+  border-top: none;
+}
+
+.row :hover {
+  color: whitesmoke;
+}
+
+.clearButton button {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.clearButton button:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.clearButton button:active {
+  color: #fff1f1;
+}
+
+.clearButton button:hover:before {
+  opacity: 1;
+}
+
+.clearButton button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
